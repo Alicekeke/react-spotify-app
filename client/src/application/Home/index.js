@@ -5,7 +5,8 @@ import { renderRoutes } from "react-router-config";
 // import { Top } from './style';
 import { Bottom } from './style';
 // NavLink做组件跳转
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import Player from '../../components/player';
  
 function Home (props) {
   const { route } = props;

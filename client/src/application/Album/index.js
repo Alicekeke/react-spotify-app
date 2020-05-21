@@ -8,13 +8,12 @@ import Scroll from "../../baseUI/scroll/index";
 import Loading from "../../baseUI/loading/index";
 import { isEmptyObject } from "./../../api/utils";
 import style from "../../assets/global-style";
-import LazyLoad from "react-lazyload";
+// import LazyLoad from "react-lazyload";
 
 export const HEADER_HEIGHT = 45;
 
 function Album(props) {
   const [showStatus, setShowStatus] = useState(true);
-
   const [title, setTitle] = useState("歌单");
   const headerEl = useRef();
   const handleScroll = useCallback(pos => {
@@ -46,9 +45,9 @@ function Album(props) {
     props.history.goBack();
   }, []);
 
-  // 点击单曲播放 - 还没写😅
-  const selectItem = (e, id) => {
-    console.log(e, id);
+  // 专辑列表的点击单曲播放 - 还没写😅
+  const selectItem = (e, id, preview_url) => {
+    console.log(e, id, preview_url);
   };
   //   封装组件代码
   const renderTopDesc = () => {
@@ -83,7 +82,7 @@ function Album(props) {
         <SongItem>
           {currentAlbum.tracks.items.map((item, index) => {
             return (
-              <li key={item.id} onClick={e => selectItem(e, item.id)}>
+              <li key={item.id} onClick={e => selectItem(e, item.id, item.preview_url)}>
                 <div className="info">
                   <span>{item.name}</span>
                   <span>{item.artists[0].name}</span>

@@ -5,7 +5,7 @@ export const Top = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 60px;
+  height: 45px;
   box-sizing: content-box;
   background: ${style["background-bottom-tab"]};
   & > .avater {
@@ -18,7 +18,7 @@ export const Top = styled.div`
   & > span {
     color: #ffffff;
     font-size: ${style["font-size-s"]};
-    line-height: 60px;
+    line-height: 45px;
     &.setting {
       font-size: 25px;
       padding: 0px 10px 10px 0px;

@@ -178,7 +178,7 @@ export const SongItem = styled.ul`
       font-size: ${style["font-size-s"]};
       width: 60px;
       height: 60px;
-      line-height: 60px;
+      line-height: 45px;
       text-align: center;
     }
   }

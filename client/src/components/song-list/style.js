@@ -37,7 +37,7 @@ export const SongItem = styled.ul`
       color: ${style ["font-color-light"]};
       width: 60px;
       height: 60px;
-      line-height: 60px;
+      line-height: 45px;
       text-align: center;
     }
   }

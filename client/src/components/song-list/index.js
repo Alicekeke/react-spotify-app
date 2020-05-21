@@ -4,8 +4,10 @@ import { SongList, SongItem } from "./style";
 const SongsList = React.forwardRef((props, refs) => {
   const { collectCount, showCollect, songs } = props;
 
-  const selectItem = (e, index) => {
-    console.log(index);
+  // 歌手页面的点击预览歌曲 在这里要传回歌曲下标并播放
+  const selectItem = (e, index, preview_url) => {
+    // console.log(index, e, preview_url);
+
   };
 
   let songList = list => {
@@ -13,12 +15,9 @@ const SongsList = React.forwardRef((props, refs) => {
     for (let i = 0; i < list.length; i++) {
       let item = list[i];
       res.push(
-        <li key={item.id} onClick={e => selectItem(e, i)}>
+        <li key={item.id} onClick={e => selectItem(e, i, item.preview_url)}>
           <div className="info">
             <span>{item.name}</span>
-            {/* <span>
-              { item.name}
-            </span> */}
           </div>
           <span className="more_operate iconfont">&#xe690;</span>
         </li>
@@ -27,14 +26,6 @@ const SongsList = React.forwardRef((props, refs) => {
     return res;
   };
 
-  const collect = count => {
-    return (
-      <div className="add_list">
-        <i className="iconfont">&#xe62d;</i>
-        <span> 收藏 ({Math.floor(count / 1000) / 10} 万)</span>
-      </div>
-    );
-  };
   return (
     <SongList ref={refs} showBackground={props.showBackground}>
       <SongItem>{songList(songs)}</SongItem>

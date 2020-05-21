@@ -33,7 +33,7 @@ export const Row = styled.div`
       flex-basis: 60px;
       width: 60px;
       height: 60px;
-      line-height: 60px;
+      line-height: 45px;
       text-align: center;
       .iconfont {
         font-size: ${style["font-size-s"]};

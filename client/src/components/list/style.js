@@ -7,7 +7,7 @@ export const ListWrapper = styled.div`
     font-weight: 700;
     padding-left: 6px;
     font-size: 14px;
-    line-height: 60px;
+    line-height: 45px;
   }
 `;
 export const List = styled.div`
